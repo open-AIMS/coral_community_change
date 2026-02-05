@@ -223,6 +223,11 @@ saveRDS(heat_map_cat_summary_9020,
 ## Generate a heatmap to summarise the contrasts
 comp2021_Oct2025_df <- readRDS(file = paste0(processed_path, "comp2021.points.rds"))
 secshelf.models <- readRDS(file = paste0(modelled_path, 'secshelf.models_3.rds'))
+secshelf.models <-
+  secshelf.models |>
+  dplyr::select(cCOMP_2021, A_SECTOR, SHELF, comp_sum)
+saveRDS(secshelf.models, file = paste0(modelled_path, 'secshelf.models_4.rds'))
+secshelf.models <- readRDS(file = paste0(modelled_path, 'secshelf.models_4.rds'))
 group.lookup <- comp2021_Oct2025_df |> 
   dplyr::select(GROUP_CODE,cCOMP_2021,COMP_2021_DESCRIPTION) |> 
   distinct()
