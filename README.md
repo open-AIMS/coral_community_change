@@ -54,6 +54,12 @@ To run the full codebase on a HPC:
 make slurm_R
 ```
 
+The main output from this codebase is a heatmap that summarises the
+contrasts of each coral group between early 1990s and early 2020s
+conditional on sector and shelf of the Great Barrier Reef.  This
+heatmap is created in the `/output/` directory.
+
+
 ## Interactively running codes
 
 After cloning the repo locally, you can step through the code.
@@ -80,3 +86,5 @@ The intended order of R scripts is:
   - this script collates the contrasts and generates a summary
     heat map
   - figures are output to `/output/`
+
+The scripts assume that the working directory is `/R`.
