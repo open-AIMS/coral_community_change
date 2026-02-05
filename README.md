@@ -16,6 +16,7 @@ The repo is structured as:
 |  |- fit_models.R
 |  |- process_models.R
 |  |- summary_plots.R
+|- .gitignore
 |- LICENCE
 |- Makefile
 |- README.md
@@ -41,6 +42,7 @@ To be able to actually run the code, the structure needs to be:
 |  |- process_models.R
 |  |- summary_plots.R
 |- outputs
+|- .gitignore
 |- LICENCE
 |- Makefile
 |- README.md
@@ -80,9 +82,11 @@ The intended order of R scripts is:
   - individual models are stored in `/data/modelled`
 - process_models.R
   - this script extracts posteriors from the `INLA` models
-  - this script performs various contrasts on the posteriors
   - collated data are stored in `/data/modelled/`
 - summary_plots.R
+  - this script generates plots of estimated cover conditional
+    on COMP2021, half-decade, sector and shelf
+  - this script performs various contrasts on the posteriors
   - this script collates the contrasts and generates a summary
     heat map
   - figures are output to `/output/`
