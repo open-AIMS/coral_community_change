@@ -47,3 +47,9 @@ To be able to actually run the code, the structure needs to be:
 |- analysis.slurm
 |- ltmp_dashboard1.sif
 ```
+
+To run the full codebase on a HPC:
+
+```
+make slurm_R
+```
